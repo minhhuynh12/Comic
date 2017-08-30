@@ -23,7 +23,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
     ArrayList<MainActivityItems> mainActivityItemsesList;
 
     public MainActivityAdapter(MainActivityItemsResponse mainActivityItemsResponse){
-        this.mainActivityItemsesList = mainActivityItemsResponse.articleList;
+        this.mainActivityItemsesList = mainActivityItemsResponse.data;
     }
 
     @Override
@@ -35,9 +35,9 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
 
     @Override
     public void onBindViewHolder(MainActivityAdapter.ViewHolder holder, int position) {
-        holder.txtTitle.setText(mainActivityItemsesList.get(position).title);
-        holder.txtChapNo.setText(mainActivityItemsesList.get(position).url);
-        holder.txtSlug.setText(mainActivityItemsesList.get(position).url);
+        holder.txtTitle.setText(mainActivityItemsesList.get(position).name);
+        holder.txtChapNo.setText(mainActivityItemsesList.get(position).id);
+        holder.txtSlug.setText(mainActivityItemsesList.get(position).slug);
     }
 
     @Override

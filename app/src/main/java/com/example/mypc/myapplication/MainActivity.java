@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new HttpAsyncTask().execute("http://hmkcode.appspot.com/rest/controller/get.json");
+        new HttpAsyncTask().execute("http://thichcomic.com:1221/api/Categories");
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         showList();

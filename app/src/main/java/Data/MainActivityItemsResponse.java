@@ -10,6 +10,6 @@ import java.util.ArrayList;
  */
 
 public class MainActivityItemsResponse implements Serializable {
-    @SerializedName("articleList")
-    public ArrayList<MainActivityItems> articleList;
+    @SerializedName("data")
+    public ArrayList<MainActivityItems> data;
 }

@@ -9,10 +9,10 @@ import java.io.Serializable;
  */
 
 public class MainActivityItems implements Serializable {
-    @SerializedName("title")
-    public String title;
-    @SerializedName("url")
-    public String url;
-//    @SerializedName("slug")
-//    public String slug;
+    @SerializedName("name")
+    public String name;
+    @SerializedName("id")
+    public String id;
+    @SerializedName("slug")
+    public String slug;
 }
