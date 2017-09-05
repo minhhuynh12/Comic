@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new HttpAsyncTask().execute("http://thichcomic.com:1221/api/Categories");
+        new HttpAsyncTask().execute("http://thichcomic.com:1221/api/Chapters");
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         showList();
@@ -72,8 +72,10 @@ public class MainActivity extends Activity {
         @Override
         protected void onPostExecute(String result) {
             Log.d("result" , "onPostExecute" + result);
+
             Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_SHORT).show();
             mainActivityItemsResponse = new Gson().fromJson(result, MainActivityItemsResponse.class);
+//            Log.d("dsdsdsdsd", "onPostExecute: " + mainActivityItemsResponse.);
             MainActivityAdapter activityAdapter = new MainActivityAdapter(mainActivityItemsResponse );
             mBinding.recyclerMain.setAdapter(activityAdapter);
 
@@ -113,5 +115,7 @@ public class MainActivity extends Activity {
         return result;
 
     }
+
+
 
 }

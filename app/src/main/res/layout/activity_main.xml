@@ -37,7 +37,10 @@
     android:layout_marginBottom="8dp"
     android:layout_marginRight="8dp"
     app:layout_constraintRight_toRightOf="parent"
-    android:background="@color/DimGrayFaded"></android.support.v7.widget.RecyclerView>
+    android:background="@color/DimGrayFaded"
+    android:scrollbars="vertical">
+
+</android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>
 </layout>
