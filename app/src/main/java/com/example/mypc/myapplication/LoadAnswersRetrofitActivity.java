@@ -35,7 +35,7 @@ public class LoadAnswersRetrofitActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.layout_load_api_main);
-        mService = ApiUtils.getSOService();
+//        mService = ApiUtils.getSOService();
         mRecyclerView = findViewById(R.id.recyclerRetrofit);
         mAdapter = new AnswersAdapter(this, new ArrayList<Item>(0), new AnswersAdapter.PostItemListener() {
 
@@ -54,25 +54,7 @@ public class LoadAnswersRetrofitActivity extends Activity {
     }
 
     public void loadAnswers() {
-        /*mService.getAnswers().enqueue(new Callback<SOAnswersResponse>() {
 
-            @Override
-            public void onResponse(Call<SOAnswersResponse> call, Response<SOAnswersResponse> response) {
-                if(response.isSuccessful()) {
-                    mAdapter.updateAnswers(response.body().getItems());
-                    Log.d("MainActivity", "posts loaded from API");
-                }else {
-                    int statusCode  = response.code();
-                    // handle request errors depending on status code
-                }
-            }
-
-            @Override
-            public void onFailure(Call<SOAnswersResponse> call, Throwable t) {
-
-            }
-        });*/
-        Log.d("response6", "result");
         mService.getAnswersObjects().enqueue(new Callback<SOAnswersResponse>() {
 
             @Override
