@@ -34,7 +34,7 @@ public class LoadApiRetrofitActivity extends Activity {
         Button submitBtn = (Button) findViewById(R.id.btn_submit);
         mResponseTv = (TextView) findViewById(R.id.tv_response);
 
-        mAPIService = ApiUtils.getAPIService();
+//        mAPIService = ApiUtils.getAPIService();
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override

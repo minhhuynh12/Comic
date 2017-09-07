@@ -69,7 +69,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
 
         public ViewHolder(View itemView) {
             super(itemView);
-            txtTitle = itemView.findViewById(R.id.txtTitle);
+            txtTitle = itemView.findViewById(R.id.txtTitleRetrofit);
             txtChapNo = itemView.findViewById(R.id.txtChapNo);
             txtSlug = itemView.findViewById(R.id.txtSlug);
             imageApi = itemView.findViewById(R.id.imgApi);
